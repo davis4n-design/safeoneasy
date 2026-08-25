@@ -4,10 +4,6 @@
 
 Reestruturar o site institucional da SafeOneasy (tecnologia para gestão de frotas, videotelemetria com IA) com um design mais moderno, visual B2B tecnológico e foco em direcionar o visitante ao contato via WhatsApp.
 
-## Referências visuais recebidas
-
-O usuário enviou screenshots das páginas atuais: Home, Quem Somos e Soluções. O redesign preserva a arquitetura de conteúdo e informações dessas páginas, modernizando visual, tipografia, hierarquia e interações.
-
 ## Decisões de design travadas
 
 - **Paleta de cores:** Azul profundo (#0A1628), rosa neon (#F43F7E), branco (#FFFFFF) e azul secundário (#1E3A5F)
@@ -24,20 +20,20 @@ O usuário enviou screenshots das páginas atuais: Home, Quem Somos e Soluções
 
 ### Páginas
 
-1. **Home** — página principal com hero, sobre, soluções, segmentos, depoimentos e blog
-2. **Quem Somos** — hero, sobre, propósito, métricas/valores, missão/visão/valores, CTA final
-3. **Soluções** — hero de soluções, planos SafeDrive (CORE, PLUS, MAX), SafePerform com funcionalidades e CTAs
+1. **Home** — página principal com todas as seções institucionais
+2. **Quem Somos** — história, missão, valores e diferenciais
+3. **Soluções** — detalhamento dos produtos SafeDrive e SafePerform
 4. **Blog** — listagem de artigos (integração com conteúdo existente)
 
-### Seções principais
+### Seções da Home
 
 1. **Navigation** — logo, links (Home, Quem Somos, Soluções, Blog), botão CTA para WhatsApp e "Acessar Plataforma"
-2. **Hero** — headline "Tecnologia que enxerga, entende e age na gestão da sua frota", CTA principal para WhatsApp, imagem/ilustração de frota com IA
-3. **Sobre** — apresentação da SafeOneasy com texto e cards de métricas
-4. **Soluções** — cards/planos para SafeDrive e SafePerform
-5. **Segmentos** — Rodoviário, Mineração e Agronegócio
-6. **Depoimentos** — carrossel ou grid com Fidens, Ferbasa e J&F
-7. **Blog** — preview dos últimos posts
+2. **Hero** — headline "Tecnologia que enxerga, entende e age na gestão da sua frota", subheadline, CTA principal para WhatsApp, imagem/ilustração de caminhão com sensores de IA
+3. **About / SafeOneasy** — bloco de apresentação da empresa com cards de métricas (anos no mercado, experiência, alertas/dia, veículos monitorados)
+4. **Soluções** — cards para SafeDrive (videotelemetria com IA) e SafePerform (controle operacional e produtividade)
+5. **Segmentos** — ícones/cards para Rodoviário, Mineração e Agronegócio
+6. **Depoimentos** — carrossel ou grid com os depoimentos de Fidens, Ferbasa e J&F
+7. **Blog** — preview dos últimos posts com thumbnails
 8. **Footer** — contato, links rápidos, redes sociais e botão flutuante de WhatsApp
 
 ## Funcionalidades
@@ -45,17 +41,17 @@ O usuário enviou screenshots das páginas atuais: Home, Quem Somos e Soluções
 - **CTA de WhatsApp em destaque** em botões do hero, navegação e footer
 - **Link direto para a plataforma** ("Acessar Plataforma")
 - **Navegação responsiva** com menu mobile
-- **Animações suaves** de entrada e scroll
-- **SEO otimizado** com títulos, meta descriptions e Open Graph
+- **Animações suaves** de entrada e scroll (revelação de seções, hover nos cards)
+- **SEO otimizado** com títulos, meta descriptions, schema de organização e Open Graph
 
 ## Tecnologia
 
 - TanStack Start + React 19 + TypeScript
 - Tailwind CSS v4 com design tokens customizados
-- Componentes visuais próprios
-- Imagens geradas sob demanda para hero e ilustrações
+- Componentes visuais próprios (não dependência excessiva de shadcn)
+- Imagens geradas sob demanda para hero e ilustrações de seções
 
-## Próximos passos
+## Próximos passos pós aprovação
 
 1. Gerar as 3 direções visuais e aguardar escolha
 2. Implementar a direção escolhida no código
