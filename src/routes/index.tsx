@@ -1,24 +1,55 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+import { WhatsAppButton } from "@/components/site/WhatsAppButton";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Solutions } from "@/components/site/Solutions";
+import { Segments } from "@/components/site/Segments";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Blog } from "@/components/site/Blog";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      {
+        title: "SafeOneasy — Segurança e Tecnologia para Frotas",
+      },
+      {
+        name: "description",
+        content:
+          "Videotelemetria com IA para gestão de frotas. Reduza acidentes, aumente a produtividade e proteja seus motoristas com SafeDrive e SafePerform.",
+      },
+      {
+        property: "og:title",
+        content: "SafeOneasy — Segurança e Tecnologia para Frotas",
+      },
+      {
+        property: "og:description",
+        content:
+          "Videotelemetria com IA para gestão de frotas. Reduza acidentes, aumente a produtividade e proteja seus motoristas.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function HomePage() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Solutions />
+        <Segments />
+        <Testimonials />
+        <Blog />
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </>
   );
 }
